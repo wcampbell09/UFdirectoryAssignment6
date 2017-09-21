@@ -1,0 +1,26 @@
+<!-- Fill in this file to create a UI view for editing listing entries. -->
+<div class="row" ng-controller="ListingsController">
+  <div class="col-md-offset-1 col-md-10 formWrapper">
+    <div class="page-header">
+      <h3>Edit listings</h3>
+  <div ng-show = "listing">
+  <h3>Edit {{listing.name}}</h3>
+   <form name="listingForm" class="form-horizontal" ng-submit="edit(listingForm.$valid)">
+    <div class="form-group">
+      <label for="Name">Name</label>
+      <input name="name" type="text" ng-model="name" id="name" class="form-control" placeholder={{listing.name}}>
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input name="address" type="text" ng-model="address" id="address" class="form-control" placeholder={{listing.address}}>
+    </div>
+    <div class="form-group">
+      <label for="code">Code</label>
+      <input name="code" type="text" ng-model="code" id="code" class="form-control" placeholder={{listing.code}}>
+    </div>
+    <button type="submit" ng-click = "update()" class="btn btn-default">change</button>
+   </form>
+  </div>
+    </div>
+  </div>
+</div>
